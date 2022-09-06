@@ -1,0 +1,387 @@
+@charset "UTF-8";
+
+:root {
+  --cor01: #1a26d6;
+  --cor02: #3845ff;
+  --cor03: #f3b53b;
+  --cor04: #f2f2f2;
+  --fonte01: 'M PLUS 2', 'Lucida Sans', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@400;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte01);
+  font-size: 16px;
+}
+
+main {
+  background-color: var(--cor04);
+}
+
+nav {
+  display: block;
+  background-color: var(--cor02);
+  height: 100px;
+  position: relative;
+}
+
+#navBar {
+  width: 94%;
+  margin: auto;
+}
+
+#navBar img {
+  width: 50px;
+  margin: 20px 0px;
+}
+
+#navBar div {
+  float: right;
+  margin: 35px 0px;
+}
+
+#navBar div a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--cor04);
+  padding-right: 40px;
+  font-size: 1.125em;
+  font-weight: 600;
+}
+
+#navBar div a:hover {
+  text-decoration: underline var(--cor03) solid;
+  text-decoration-thickness: 5px;
+  transition: ease-in 0.3s;
+}
+
+.tela {
+  max-height: 100%;
+  height: 100vh;
+}
+
+#inicial {
+  display: grid;
+  grid-template-columns: 50% 30%;
+  justify-content: space-around;
+  padding-top: 20px;
+  position: relative;
+  color: var(--cor04);
+  width: 100%;
+  background-image: url('../img/cidade.png');
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-position-x: right;
+  background-color: var(--cor02);
+}
+
+.celular {
+  position: relative;
+  object-fit: contain;
+}
+
+.iphone {
+  z-index: 2;
+  padding-bottom: 20px;
+}
+
+.telaInicial {
+  margin-top: 20px;
+  width: 600px;
+}
+
+.telaInicial h1 {
+  font-family: var(--fonte01);
+  font-size: 4em;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.telaInicial span {
+  border: 10px var(--cor03) solid;
+  border-radius: 100%;
+}
+
+.telaInicial p {
+  font-size: 1.5em;
+  text-align: justify;
+  font-family: var(--fonte01);
+  font-weight: 400;
+  width: 550px;
+  padding-top: 30px;
+}
+
+#explicacao {
+  padding-top: 20px;
+  display: grid;
+  grid-template-rows: 20% 80%;
+  margin-bottom: 45px;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--cor04);
+}
+
+.telaExplicacao {
+  height: 50px;
+}
+
+.telaExplicacao h2 {
+  font-size: 3em;
+  align-items: center;
+}
+.telaExplicacao span {
+  font-family: var(--fonte01);
+  font-weight: 800;
+  color: var(--cor01);
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 30% 30%;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.textoExplicacao {
+  text-align: justify;
+  margin-right: 25px;
+}
+
+#aplicacoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor02);
+  flex-direction: column;
+}
+
+#aplicacoes h2,
+#aplicacoes p {
+  color: var(--cor04);
+}
+
+#aplicacoes h2 {
+  margin-top: 30px;
+  font-size: 3em;
+  border: 10px var(--cor03) solid;
+  border-radius: 100%;
+  text-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.185);
+}
+
+#aplicacoes p {
+  width: 78%;
+  text-align: justify;
+  padding: 30px;
+}
+
+.telaAplicacoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor02);
+}
+
+.setores {
+  width: 1100px;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.setores .setor {
+  max-width: 300px;
+  height: 100px;
+  position: relative;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  background: var(--cor04);
+  border-radius: 10px;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+  box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.185);
+}
+
+.setores .setor:hover {
+  height: 650px;
+}
+
+.setores .setor .image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+}
+
+.setores .setor .image img {
+  max-width: 100%;
+}
+
+.setores .setor .texto {
+  position: relative;
+  margin-top: -140px;
+  text-align: justify;
+  padding: 10px;
+  color: var(--cor02);
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.setores .setor .texto p {
+  color: black;
+  padding-top: 10px;
+}
+
+.setores .setor:hover .texto {
+  visibility: visible;
+  transition-delay: 0.3s;
+  cursor: pointer;
+}
+
+
+.containerProjecoes {
+  display:flex;
+  flex-direction: column;
+}
+
+.textoProjecoes {
+  background-color: var(--cor04);
+  margin-left: 10px;
+  margin-top: -120px;
+  width: 90%;
+  border-top-right-radius: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.textoProjecoes h2 {
+  font-size: 2em;
+  color: #1a26d6;
+  font-weight: 600;
+  font-family: var(--fonte01);
+  margin: 20px auto;
+}
+
+.textoProjecoes p {
+  text-align: justify;
+  padding: 10px 10px 10px auto;
+  font-size: 18px;
+  width: 98%;
+}
+
+.imagemProjecoes {
+  width: 100%;
+  background-color: var(--cor02);
+  height: 500px;
+  border-bottom-right-radius: 10px;
+}
+
+.imagemProjecoes img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-bottom-right-radius: 10px;
+}
+
+.explicacaoProjecoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  font-family: var(--fonte01);
+  width: 90%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.explicacaoProjecoesTexto h2 {
+  font-size: 1.5em;
+  color: #1a26d6;
+  font-weight: 600;
+  font-family: var(--fonte01);
+  margin-bottom: 20px;
+}
+
+.explicacaoProjecoesTexto p {
+  text-align: justify;
+  margin: 0px 0px 20px 0px;
+  font-size: 18px;
+  padding: 10px 10px 10px 0px;
+}
+
+.explicacaoProjecoesImagem {
+  margin-right: 15px;
+}
+
+.explicacaoProjecoesImagem img {
+  width: 60px;
+}
+
+#referencias {
+  background-color: var(--cor02);
+  background-image: url(../img/cidade.png);
+  background-size: 60vh;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-repeat: repeat-x;
+  max-height: 100%;
+  height: 100%;
+}
+
+#referencias h2 {
+  font-size: 48px;
+  margin-left: 120px;
+  margin-bottom: 40px;
+  padding-top: 2.5%;
+  color: var(--cor04);
+}
+
+#referencias span {
+  border: 10px var(--cor03) solid;
+  border-radius: 100%;
+}
+
+.referenciaSecundaria {
+  display: flex;
+  background-color: var(--cor04);
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  text-align: justify;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.referenciaSecundaria p {
+  color: black;
+  font-size: 16px;
+  font-weight: bolder;
+  padding: 10px;
+}
+
+.referenciaSecundaria a {
+  text-decoration: none;
+}
+
+.containerReferencias {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  width: 100%;
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 0px auto;
+  padding: 18px;
+}
